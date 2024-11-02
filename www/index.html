@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>ChefBuddy</title>
+    </head>
+    <body>
+        <div class="bg-color header-nav">
+            <div class="container">
+                <header class="header flex">
+                    <div class="app-title">
+                        <h1>ChefBuddy</h1>
+                    </div>
+                    <div class="user-info flex">
+                        <p class="menu-icon">Google</p>
+                        <i class="bi bi-bookmark-star menu-icon"></i>
+                    </div>
+                </header>
+            </div>
+        </div>
+        
+        <main>
+            <div class="container">
+                <h2 class="main-title">Todas las Recetas</h2>
+        
+                <div class="product-wrapper">
+                    <div class="product">
+                        <img class="product-image" src="img/y8q203cy.bmp" alt="">
+                        <div class="product-details">
+                            <h3 class="product-title">Nombre plato</h3>
+                            <p class="product-time">1 hora</p>
+                            <a href="#" class="product-add">Ver Receta</a>
+                        </div>
+                    </div>
+        
+                    <div class="product">
+                        <img class="product-image" src="img/y8q203cy.bmp" alt="">
+                        <div class="product-details">
+                            <h3 class="product-title">Nombre plato</h3>
+                            <p class="product-time">1 hora</p>
+                            <a href="#" class="product-add">Ver Receta</a>
+                        </div>
+                    </div>
+        
+                    <div class="product">
+                        <img class="product-image" src="img/y8q203cy.bmp" alt="">
+                        <div class="product-details">
+                            <h3 class="product-title">Nombre plato</h3>
+                            <p class="product-time">1 hora</p>
+                            <a href="#" class="product-add">Ver Receta</a>
+                        </div>
+                    </div>
+        
+                    <div class="product">
+                        <img class="product-image" src="img/y8q203cy.bmp" alt="">
+                        <div class="product-details">
+                            <h3 class="product-title">Nombre plato</h3>
+                            <p class="product-time">1 hora</p>
+                            <a href="#" class="product-add">Ver Receta</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="search-section hidden">
+                    <h2></h2>
+                    <input type="text" class="search-bar" placeholder="Search...">
+                </div>
+            </div>
+        </main>
+        
+        <dialog class="modal" id="modal">
+            <h3 class="modal-title">Crea Tu Preparación</h3>
+            <button  class="modal-btn"><i class="bi bi-camera camera-icon"></i>Agrega una nueva receta</button>
+            <div class="modal-close-wrapper">
+                <button id="close-button" class="modal-close-btn">Cerrar</button>
+            </div>
+        </dialog>
+        
+        <div class="bg-color footer-nav">
+            <div class="container">
+                <footer class="flex">
+                    <button id="home-btn" class="menu-icon btn">
+                        <i class="bi bi-house-heart-fill"></i>
+                    </button>
+                    <button id="search-btn" class="menu-icon btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button id="open-button" class="menu-icon btn">
+                        <i class="bi bi-plus-circle"></i>
+                    </button>
+                    <button id="calendar-btn" class="menu-icon btn">
+                        <i class="bi bi-calendar"></i>
+                    </button>
+                    <button id="ideas-btn" class="menu-icon btn">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </button>
+                </footer>
+            </div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

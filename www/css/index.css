@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-bg: #F3F2FF;
+    --clr-bg-sec: #F2F3F4;
+    --clr-text: #23365C;
+    --clr-text-sec: #333333;
+    --clr-hover: #CBC8FF;
+    --btn-bg: #D6EAF8;
+    --btn-bg-hover: #B0D4E3;
+    --btn-text-hover: #FFFFFF;
+}
+
+html {
+    /*Para solucionar el sticky footer*/
+    height: 100%;
+}
+
+body {
+    /*Para solucionar el sticky footer*/
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+    /* Elimina todos los estilos por defecto */
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-title {
+    color: var(--clr-text);
+}
+
+.header {
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: var(--clr-text);
+    z-index: 1;
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .3);
+}
+
+.bg-color {
+    background-color: var(--clr-bg);
+}
+
+.menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--clr-text);
+
+    &:hover {
+        color: var(--clr-hover);
+    }
+
+    &:focus {
+        color: var(--clr-hover);
+    }
+}
+
+.user-info {
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-nav {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
+    /*Para solucionar el sticky footer*/
+    margin-top: auto;
+}
+
+footer {
+    padding: 0.75rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn:focus {
+    outline: none;
+    /* Elimina el borde azul de focus */
+    background-color: transparent;
+    /* Evita el cambio de fondo */
+}
+
+
+/*Estilos de tarjetas*/
+main {
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    color: var(--clr-text);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details {
+    background-color: var(--clr-bg-sec);
+    color: var(--clr-text-sec);
+    padding: .5rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: -.9rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: .22rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+}
+
+.product-time {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.product-add {
+    background-color: #D6EAF8;
+    color: var(--clr-text-sec);
+    padding: .5rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.product-add:hover,
+:focus {
+    background-color: var(--btn-bg);
+    color: var(--btn-text-hover);
+}
+
+
+
+/*Ventana Modal*/
+
+.modal {
+    display: none;
+    border: 0;
+    box-shadow: 0 0 .6em rgb(0 0 0 / .3);
+    z-index: 2;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    /*Ancho del modal*/
+    background-color: #fff;
+    /*opacity: 0.94;*/
+    color: var(--clr-text);
+    max-width: 40ch;
+    border-radius: 1rem;
+
+    &>* {
+        padding: 1rem;
+        text-transform: uppercase;
+    }
+
+    &[open] {
+        display: flex;
+        flex-direction: column;
+
+        /*Estos estilos los trae por defecto dialog*/
+        scale: 1;
+        transition: scale .3s ease-in-out;
+
+        /*Para darle una transición al abrirlo*/
+        @starting-style {
+            scale: 0;
+        }
+    }
+
+    &::backdrop {
+        background: linear-gradient(45deg, pink, lightblue);
+        opacity: .75;
+        background: rgba(221, 230, 233, 0.747);
+    }
+}
+
+.modal-title {
+    border-bottom: solid thin #dbdbdb;
+}
+
+.modal-btn {
+    border-bottom: solid thin #dbdbdb;
+    background-color: transparent;
+    color: var(--clr-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.modal-close-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.modal-close-btn {
+    cursor: pointer;
+    background-color: var(--btn-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background-color: var(--btn-bg-hover);
+        color: var(--btn-text-hover);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.camera-icon {
+    font-size: 1.6rem;
+    padding-right: .8rem;
+    cursor: pointer;
+    color: var(--clr-text);
+
+    &:hover {
+        color: var(--clr-hover);
+    }
+
+    &:focus {
+        color: var(--clr-hover);
+    }
+}
+
+/*Búsqueda de Recetas*/
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    border: thin solid var(--clr-text-sec);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+    &:focus,
+    :hover {
+        outline: none;
+        /* Elimina el borde azul de enfoque */
+        background-color: transparent;
+        /* Mantiene el fondo transparente */
+        color: var(--clr-text-sec);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/*<meta http-equiv="Content-Security-Policy"
+content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">*/
