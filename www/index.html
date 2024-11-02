@@ -79,11 +79,15 @@
         
         <dialog class="modal" id="modal">
             <h3 class="modal-title">Crea Tu Preparación</h3>
-            <button  class="modal-btn"><i class="bi bi-camera camera-icon"></i>Agrega una nueva receta</button>
+            <button  class="modal-btn">
+                <i id="btnCamera" class="bi bi-camera camera-icon"></i>Agrega una nueva receta
+            </button>
             <div class="modal-close-wrapper">
                 <button id="close-button" class="modal-close-btn">Cerrar</button>
             </div>
         </dialog>
+
+        <img id="myImage" class="img-fluid" style="display: none; width: 100px; height: 100px;" alt="Foto tomada" />
         
         <div class="bg-color footer-nav">
             <div class="container">
