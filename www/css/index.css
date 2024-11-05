@@ -160,12 +160,12 @@ main {
     font-size: 1.1rem;
 }
 
-.product-time {
+.product-origin {
     font-size: 1rem;
     opacity: 0.8;
 }
 
-.product-add {
+.product-ingredients {
     background-color: #D6EAF8;
     color: var(--clr-text-sec);
     padding: .5rem;
@@ -174,7 +174,7 @@ main {
     text-align: center;
 }
 
-.product-add:hover,
+.product-ingredients:hover,
 :focus {
     background-color: var(--btn-bg);
     color: var(--btn-text-hover);
@@ -278,8 +278,9 @@ main {
 
 /*Búsqueda de Recetas*/
 
-.search-bar {
-    width: 100%;
+form input[type="text"] {
+    margin-right: 5px;
+    flex-grow: 1;
     padding: 0.5rem;
     border: thin solid var(--clr-text-sec);
     border-radius: 0.5rem;
@@ -292,6 +293,22 @@ main {
         background-color: transparent;
         /* Mantiene el fondo transparente */
         color: var(--clr-text-sec);
+    }
+}
+
+button[type="submit"] {
+    background-color: var(--clr-bg-sec);
+    border: thin solid var(--clr-text-sec);
+    padding: 0.5rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:focus,
+    :hover {
+        background-color: var(--btn-bg);
+        color: var(--btn-text-hover);
     }
 }
 
