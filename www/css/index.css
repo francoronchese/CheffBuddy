@@ -316,33 +316,5 @@ button[type="submit"] {
     display: none;
 }
 
-.results-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.meal-container {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-}
-
-.meal-img {
-    width: 100%;
-    height: auto;
-}
-
-.view-recipe-btn {
-    background-color: #cce5ff;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-}
-
-
-
 /*<meta http-equiv="Content-Security-Policy"
 content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">*/

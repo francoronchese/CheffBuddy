@@ -6,10 +6,10 @@ const productWrapper = document.querySelector('.product-wrapper');  // Contenedo
 const searchSection = document.querySelector('.search-section');    // Sección de búsqueda
 
 searchButton.addEventListener('click', () => {
-    // Cambiar el título a "Search"
+    // Cambia el título a "Search"
     mainTitle.textContent = 'Buscar Recetas';
 
-    // Ocultar las recetas y mostrar la barra de búsqueda
+    // Oculta las recetas y muestra la barra de búsqueda
     productWrapper.classList.add('hidden');
     searchSection.style.display = 'block';
 });
@@ -20,9 +20,9 @@ searchButton.addEventListener('click', () => {
 const homeButton = document.getElementById('home-btn');
 
 homeButton.addEventListener('click', () => {
-    mainTitle.textContent = 'Todas las Recetas'; // Cambiar el título de nuevo a 'Todas las Recetas'
+    mainTitle.textContent = 'Todas las Recetas'; // Cambia el título de nuevo a 'Todas las Recetas'
     
-    // Mostrar las recetas y ocultar la sección de búsqueda
+    // Muestra las recetas y oculta la sección de búsqueda
     productWrapper.classList.remove('hidden');
     searchSection.style.display = 'none';
 });
@@ -35,7 +35,7 @@ homeButton.addEventListener('click', () => {
 // Modal para mostrar los ingredientes
 const modalIngredients = document.getElementById('modal-ingredients');
 const closeIngredientsModal = document.getElementById('close-ingredients-modal');
-const ingredientsList = document.getElementById('ingredients-list'); // Asegúrate de tener un elemento con este ID en tu HTML
+const ingredientsList = document.getElementById('ingredients-list'); 
 
 // Evento para cerrar el modal de ingredientes
 closeIngredientsModal.addEventListener('click', () => {
@@ -44,14 +44,14 @@ closeIngredientsModal.addEventListener('click', () => {
 
 // Función para mostrar los ingredientes y sus medidas en el modal
 function showIngredients(meal) {
-    ingredientsList.innerHTML = ''; // Limpiar la lista antes de agregar nuevos elementos
+    ingredientsList.innerHTML = ''; // Limpia la lista antes de agregar nuevos elementos
 
-    // Iterar sobre los ingredientes y sus medidas
+    // Itera sobre los ingredientes y sus medidas
     for (let i = 1; i <= 20; i++) {
         const ingredient = meal[`strIngredient${i}`];
         const measure = meal[`strMeasure${i}`];
 
-        // Solo mostrar ingredientes que tengan nombre
+        // Solo muestra ingredientes que tengan nombre
         if (ingredient && ingredient.trim() !== '') {
             const listItem = document.createElement('li');
             listItem.textContent = `${measure} - ${ingredient}`;
@@ -59,7 +59,7 @@ function showIngredients(meal) {
         }
     }
 
-    modalIngredients.showModal(); // Mostrar el modal después de llenar la lista
+    modalIngredients.showModal(); // Muestra el modal después de llenar la lista
 }
 
 // Función para obtener las recetas de la API por una letra específica
@@ -108,8 +108,8 @@ async function fetchAllRecipes() {
         ingredientLinks.forEach(link => {
             link.addEventListener('click', (event) => {
                 event.preventDefault(); // Evita que el enlace recargue la página
-                const meal = JSON.parse(link.getAttribute('data-meal')); // Obtener la información de la comida
-                showIngredients(meal); // Mostrar los ingredientes
+                const meal = JSON.parse(link.getAttribute('data-meal')); // Obtiene la información de la comida
+                showIngredients(meal); // Muestra los ingredientes
             });
         });
 
