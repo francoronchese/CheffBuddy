@@ -285,6 +285,7 @@ form input[type="text"] {
     border: thin solid var(--clr-text-sec);
     border-radius: 0.5rem;
     font-size: 1rem;
+    margin-bottom: 1.5rem;
 
     &:focus,
     :hover {
@@ -304,6 +305,7 @@ button[type="submit"] {
     border-radius: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
+    margin-bottom: 1.5rem;
 
     &:focus,
     :hover {
@@ -316,5 +318,3 @@ button[type="submit"] {
     display: none;
 }
 
-/*<meta http-equiv="Content-Security-Policy"
-content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">*/
